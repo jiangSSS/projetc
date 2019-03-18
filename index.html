@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+		<title>xyc</title>
+    <!--<link href="https://cdn.bootcss.com/mui/3.7.1/css/mui.min.css" rel="stylesheet">-->
+	</head>
+	<body>
+		<div id="app"></div>
+	</body>
+	<script>
+		// function relizeWindow(){
+		//   let deviceWidth = document.documentElement.clientWidth
+		//   let rootRem = deviceWidth / 10 + "px"
+		//   document.documentElement.style.fontSize = rootRem
+		// }
+		// relizeWindow()
+		!function(n) {
+			var e = n.document,
+				t = e.documentElement,
+				i = 1080,
+				d = i / 100,
+				o = "orientationchange" in n ? "orientationchange" : "resize",
+				a = function() {
+					var n = t.clientWidth || 320;
+					n > 1080 && (n = 1080);
+					t.style.fontSize = n / d + "px"
+				};
+			e.addEventListener && (n.addEventListener(o, a, !1), e.addEventListener("DOMContentLoaded", a, !1))
+		}(window);
+	</script>
+  <!--<script src="https://cdn.bootcss.com/mui/3.7.1/js/mui.min.js"></script>-->
+</html>
